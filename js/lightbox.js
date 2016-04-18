@@ -86,7 +86,7 @@ $("body").keyup( function(e){
     getPrevImage();
   } else if (e.keycode == 39){
     getNextImage();
-   if (e.keycode == 27){
+  } else if (e.keycode == 27){
     $("#lightbox").fadeOut();
   }
 });
