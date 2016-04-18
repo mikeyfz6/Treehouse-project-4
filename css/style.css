@@ -1,0 +1,165 @@
+/***************************
+Base Styles
+***************************/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	font-family:;
+	font-size: 1em;
+	background-color: #BABEBF;
+}
+img {
+	max-width: 100%;
+}
+
+/* Header/Search styles */
+
+.header {
+	background-color: #333;
+	margin: 0;
+	padding-bottom: 50px;
+	border-bottom: 4px solid #fff;
+}
+.search-field {
+	
+	text-align: center;
+	
+}
+input[type="text"] {
+	  border: 1px solid #000;
+	  font-size: 1em;
+	  height: auto;
+	  padding: 15px;
+	  width: 80%;
+	  background-color: #e8eeef;
+	  color: #8a97a0;
+	  box-shadow: 0 3px 0 rgba(0,0,0,0.03) inset;
+	  border-radius: 5px;
+	  margin-top: 40px;
+	  transition: .25s box-shadow ease-in-out .1s;
+}
+input[type="text"]:hover {
+	border: 5px solid #fff;
+	border-radius: 5px;
+}
+
+/* Gallery styles */
+
+
+.gallery ul {
+	/*padding: 15px;*/
+	margin: 0 auto;
+	display: block;
+	max-width: 90%;
+	text-align: center;
+}
+
+.gallery ul li {
+		display: inline-block;
+		margin: 60px;
+		transition: .25s box-shadow ease-in-out .1s;
+}
+.gallery img {
+	border: 2px solid #fff;
+	border-radius: 2px;
+	width: 240px;
+	height: 240px;
+}
+
+.gallery ul li:hover{
+  box-shadow: 0 0 15px #000;
+
+}
+
+/* media querys */
+
+
+@media screen and ( min-width: 320px ) {
+
+	.gallery ul {
+		max-width: 80%;
+	}
+	.gallery ul li {
+		margin: 15px 30px;
+	}
+	input[type="text"] {
+		max-width: 60%;
+	}
+} 
+
+@media screen and ( min-width: 768px ) {
+	.gallery ul {
+		max-width: 1280px;
+	}
+	.gallery ul li {
+		margin: 30px;
+	}
+	input[type="text"] {
+		max-width: 30%;
+	}
+}
+
+#overlay {
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left:0;
+	display: none;
+	text-align: center;
+	z-index: 1000;
+}
+#overlay img {
+	margin-top: 5%;
+	width: 55%;
+	border: 10px solid #fff;
+	border-radius: 10px;
+}
+#overlay p {
+	color: #fff;
+	font-size: 1.25em;
+	font-weight: bold;
+	letter-spacing: .02em;
+	background-color: #333;
+	margin: 10px auto;
+	padding: 10px;
+	max-width: 40%;
+	line-height: 1;
+}
+
+#rightArrow {
+		font-size: 50px;
+    position: absolute;
+    top: 50%;
+    right: 18.9%;
+    color: #fff;
+    cursor: pointer; 
+}
+#leftArrow {
+		font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 18.9%;
+    color: #fff;
+		cursor: pointer;
+}
+#closeLightbox {
+		font-size: 25px;
+    line-height: 1;
+    position: absolute;
+    top: 5%;
+    right: 18.9%;
+    color: #fff;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
