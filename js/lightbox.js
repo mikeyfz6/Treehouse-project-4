@@ -27,7 +27,7 @@ $("body").append($overlay);
 $("#lightbox a").on("click",function(event){
   event.preventDefault();//Prevent link from opening in new window
   getCurrentImage(this);//Call getCurrentImage function
-  $overlay.fadeIn("slow");//Show the overlay.
+  $overlay.slideDown("slow");//Show the overlay.
 });
 //Capture the click event on leftArrow
 $leftArrow.on("click", function(){
@@ -72,7 +72,7 @@ function getNextImage() {//Create function called getNextImage
 //When overlay is clicked
 $closeLightbox.click(function(){
   //Hide the overlay
-  $overlay.fadeOut();
+  $overlay.fadeOut(1000);
 });
 
 
@@ -81,12 +81,12 @@ KEYBOARD NAVIGATION
 *****************************/
 
 
-$("body").keyup( function(e){
-  if(e.keycode == 37){
+/*$("#overlay").keyup( function(event){
+  if(event.keycode == 37){
     getPrevImage();
-  } else if (e.keycode == 39){
+  } else if (event.keycode == 39){
     getNextImage();
-  } else if (e.keycode == 27){
-    $("#lightbox").fadeOut();
+  } else if (event.keycode == 27){
+    $overlay.fadeOut();
   }
-});
+});*/
